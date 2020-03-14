@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
+import * as styleProvider from './src/styles/provider';
+
+styleProvider.loadGlobalCss();
