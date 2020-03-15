@@ -7,6 +7,8 @@ export type ColorList = Color[];
 export type BlockProps = {
   color?: Color;
   width?: string;
+  gridRowSpan?: number;
+  gridColumnSpan?: number;
 };
 
 export type MondrianProps = any;
