@@ -27,10 +27,7 @@ const Mondrian: React.FC<ComponentProps> = ({
   howManyElements = 100,
 }) => {
   const colorProvider = createRandomColorProvider(colors);
-  const blocksFactory = createBlocksFactory(
-    colorProvider,
-    randomIntegerProvider,
-  );
+  const blocksFactory = createBlocksFactory(colorProvider);
   const blocks: IBlockViewModel[] = blocksFactory.create(howManyElements);
 
   const getAvailableColorIndex = () => {

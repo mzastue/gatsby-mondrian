@@ -24,13 +24,9 @@ export const createRandomColorProvider = (colors: ColorList) => {
 
 export const createBlocksFactory = (
   colorProvider: RandomColorProvider,
-  randomIntegerProvider: RandomIntegerProvider,
 ): BlockFactoryType => ({
   create: (howMany: number) => {
     const iterable = [...Array(howMany)];
-    return iterable.map(
-      (_, index) =>
-        new BlockViewModel(index, randomIntegerProvider, colorProvider),
-    );
+    return iterable.map((_, index) => new BlockViewModel(index, colorProvider));
   },
 });
