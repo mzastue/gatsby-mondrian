@@ -18,10 +18,25 @@ const createColorProvider = (colors: ColorList) => {
   };
 };
 
+enum DEFAULT_COLORS {
+  RED = '#DF2935',
+  YELLOW = '#FDCA40',
+  BLUE = '#3772FF',
+  WHITE = '#E6E8E6',
+  BLACK = '#080708',
+}
+
 const Mondrian: React.FC<ComponentProps> = ({
-  colors = ['red', 'blue', 'black', 'yellow', 'green', 'white'],
+  colors = [
+    DEFAULT_COLORS.BLACK,
+    DEFAULT_COLORS.BLUE,
+    DEFAULT_COLORS.RED,
+    DEFAULT_COLORS.YELLOW,
+    DEFAULT_COLORS.WHITE,
+  ],
+  howManyElements = 2,
 }) => {
-  const elementsCount = getRandomInteger(40, 40);
+  const elementsCount = getRandomInteger(howManyElements, howManyElements);
   const iterable = [...Array(elementsCount)];
   const colorProvider = createColorProvider(colors);
   const getRandomColor = () =>
@@ -33,7 +48,6 @@ const Mondrian: React.FC<ComponentProps> = ({
         <S.Block
           key={`block-${index}`}
           color={getRandomColor()}
-          // width={`${getRandomInteger(100, 400)}px`}
           gridRowSpan={getRandomInteger(1, 4)}
           gridColumnSpan={getRandomInteger(1, 2)}
         />

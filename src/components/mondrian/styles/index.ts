@@ -8,11 +8,12 @@ Styled.Mondrian = styled('div')`
   height: 100%;
 
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(20, auto);
+  grid-template-rows: repeat(10, auto);
 
   grid-gap: 10px;
-  border: 10px solid black;
-  background: black;
+  border: 10px solid #080708;
+  background: #080708;
   box-sizing: border-box;
 `;
 

@@ -15,7 +15,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <FullPageContainer>
-      <Mondrian />
+      <Mondrian howManyElements={100} />
     </FullPageContainer>
   </Layout>
 );
