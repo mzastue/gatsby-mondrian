@@ -1,6 +1,6 @@
 import { StyledComponent } from '@emotion/styled';
 
-type Color = string;
+export type Color = string;
 
 export type ColorList = Color[];
 
