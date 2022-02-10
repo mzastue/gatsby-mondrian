@@ -29,7 +29,7 @@
     "gatsby-plugin-emotion": "^4.1.24",
     "gatsby-plugin-sass": "^2.1.30",
     "husky": "^4.2.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
